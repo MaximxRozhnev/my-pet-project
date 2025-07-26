@@ -17,7 +17,7 @@ CSS — базовые стили для оформления без сторо�
 📱 Адаптивный дизайн, удобный для просмотра на мобильных устройствах и ПК
 
 
-![image1](https://github.com/user-attachments/assets/3afce00d-ce50-467b-9075-739a63b9d5c9)
+![image1](https://github.com/user-attachments/assets/3afce00d-ce50-467b-9071-739a63b9d5c9)
 
 ![image2](https://github.com/user-attachments/assets/375f587b-9c98-4c6b-a4b9-d5c2f371f7e7)
 
