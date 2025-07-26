@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .my_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+  
+    /* два фона */
+    background-image:
+      url('images/1.jpg'),
+      url('images/2.jpg');
+  
+    /* масштабируем каждое по cover */
+    background-size: cover, cover;
+  
+    /* первое слева по центру, второе — справа по центру */
+    background-position: left center, right center;
+  
+    background-repeat: no-repeat, no-repeat;
+  }
+  
+
+  /* Мобильные экраны (ширина до 768px — подберите по своему) */
+@media (max-width: 768px) {
+  .my_bg {
+    background-size: cover;           /* масштабируем так, чтобы заполнить всё */
+    background-position: center center; /* центрируем по обеим осям */
+  }
+}
