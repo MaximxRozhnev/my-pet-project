@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shedule</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> <!-- Tailwind -->
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/> <!--  Font awesome -->
+</head>
+<body class="bg-slate-200">
+    <!-- Shedule -->
+     <div class="container relative w-full m-auto bg-slate-50 p-2">
+        <!-- Info -->
+        <section id="Info" class="p-2 flex items-center gap-4 md:gap-8">
+            <!-- Icon -->
+            <i class="fa-regular fa-clock text-lg text-gray-400 md:text-4xl"></i>
+            <!-- Text -->
+            <div class="flex flex-col">
+                <p class="text-gray-800 text-md font-medium md:text-2xl">Business hours</p>
+                <p class="text-gray-400 text-xs md:text-xl">Control how this phone number works at different times of day</p>
+            </div>
+            <!-- Button -->
+            <button class="ml-auto text-md text-gray-400 hover:text-gray-600 md:text-2xl">
+                <i class="fas fa-angle-up"></i>
+            </button>
+        </section>
+
+        <hr class="text-gray-300 mx-2">
+
+        <section id="settings">
+            <!-- Enable -->
+            <div class="p-2 flex items-center gap-4 md:gap-8">
+                <!-- Text -->
+                <div class="flex flex-col">
+                    <p class="text-gray-800 font-bold text-sm md:text-2xl">Enable</p>
+                    <p class="text-gray-400 text-xs md:text-xl">Quicly enable or disable business hours</p>
+                </div>
+                <!-- Button -->
+                <div class="ml-auto w-12 h-6 bg-gray-400 rounded-full relative flex items-center px-0.5
+                hover:scale-105
+                md:w-16 md:h-8
+                ">
+                    <div class="w-5 h-5 bg-white rounded-full shadow transition-transformmd:w-7 md:h-7"></div>
+                </div>
+
+            </div>
+
+            <hr class="text-gray-300 mx-2">
+
+            <!-- Timezone -->
+            <div class="p-2 flex items-center gap-4 md:gap-8">
+                <!-- Text -->
+                <div class="flex flex-col">
+                    <p class="text-gray-800 font-bold text-sm md:text-2xl">Timezone</p>
+                    <p class="text-gray-400 text-xs md:text-xl">Set your timezone</p>
+                </div>
+                <!-- Dropdown -->
+                <div class="ml-auto gap">
+                    <!-- Кнопка -->
+                    <button class="flex items-center gap-8 rounded-md border border-gray-300 p-2 bg-white text-xs font-medium text-gray-700
+                        hover:bg-gray-50
+                        md:text-xl
+                        ">
+                        (UTC-08:00) Pacific Time
+                        <i class="fas fa-angle-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="text-gray-300 mx-2">
+
+        <!-- Days -->
+        <section id="days" class="p-2">
+            <!-- Monday -->
+            <div class="flex items-center gap-2 my-2">
+                <!-- Toggle Button -->
+                <div class="flex-shrink-0 w-12 h-6 bg-blue-600 rounded-full relative flex items-center px-0.5 hover:scale-105 md:w-16 md:h-8">
+                    <div class="ml-auto w-5 h-5 bg-white rounded-full shadow transition-transform md:w-7 md:h-7"></div>
+                </div>  
+
+                <!-- Day Name -->
+                <p class="font-medium text-xs max-w-[80px] truncate whitespace-nowrap md:text-xl md:max-w-[140px]">Monday</p>
+
+                <!-- Time Buttons -->
+                <div class="flex items-center gap-1 ml-auto">
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">From</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">09:00 AM</p>
+                    </button>
+
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">To</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">11:00 PM</p>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Tuesday -->
+            <div class="flex items-center gap-2 my-2">
+                <!-- Toggle Button -->
+                <div class="flex-shrink-0 w-12 h-6 bg-blue-600 rounded-full relative flex items-center px-0.5 hover:scale-105 md:w-16 md:h-8">
+                    <div class="ml-auto w-5 h-5 bg-white rounded-full shadow transition-transform md:w-7 md:h-7"></div>
+                </div>  
+
+                <!-- Day Name -->
+                <p class="font-medium text-xs max-w-[80px] truncate whitespace-nowrap md:text-xl md:max-w-[140px]">Tuesday</p>
+
+                <!-- Time Buttons -->
+                <div class="flex items-center gap-1 ml-auto">
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">From</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">09:00 AM</p>
+                    </button>
+
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">To</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">11:00 PM</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="flex items-center gap-2 my-2">
+                <!-- Toggle Button -->
+                <div class="flex-shrink-0 w-12 h-6 bg-blue-600 rounded-full relative flex items-center px-0.5 hover:scale-105 md:w-16 md:h-8">
+                    <div class="ml-auto w-5 h-5 bg-white rounded-full shadow transition-transform md:w-7 md:h-7"></div>
+                </div>  
+
+                <!-- Day Name -->
+                <p class="font-medium text-xs max-w-[80px] truncate whitespace-nowrap md:text-xl md:max-w-[140px]">Wednesday</p>
+
+                <!-- Time Buttons -->
+                <div class="flex items-center gap-1 ml-auto">
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">From</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">09:00 AM</p>
+                    </button>
+
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">To</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">11:00 PM</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Thursday -->
+            <div class="flex items-center gap-2 my-2">
+                <!-- Toggle Button -->
+                <div class="flex-shrink-0 w-12 h-6 bg-blue-600 rounded-full relative flex items-center px-0.5 hover:scale-105 md:w-16 md:h-8">
+                    <div class="ml-auto w-5 h-5 bg-white rounded-full shadow transition-transform md:w-7 md:h-7"></div>
+                </div>  
+
+                <!-- Day Name -->
+                <p class="font-medium text-xs max-w-[80px] truncate whitespace-nowrap md:text-xl md:max-w-[140px]">Thursday</p>
+
+                <!-- Time Buttons -->
+                <div class="flex items-center gap-1 ml-auto">
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">From</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">09:00 AM</p>
+                    </button>
+
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">To</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">11:00 AM</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Friday -->
+            <div class="flex items-center gap-2 my-2">
+                <!-- Toggle Button -->
+                <div class="flex-shrink-0 w-12 h-6 bg-blue-600 rounded-full relative flex items-center px-0.5 hover:scale-105 md:w-16 md:h-8">
+                    <div class="ml-auto w-5 h-5 bg-white rounded-full shadow transition-transform md:w-7 md:h-7"></div>
+                </div>  
+
+                <!-- Day Name -->
+                <p class="font-medium text-xs max-w-[80px] truncate whitespace-nowrap md:text-xl md:max-w-[140px]">Friday</p>
+
+                <!-- Time Buttons -->
+                <div class="flex items-center gap-1 ml-auto">
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">From</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">07:00 AM</p>
+                    </button>
+
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">To</p>
+                        <p class="text-[11px] font-medium text-black whitespace-nowrap md:text-base">00:00 PM</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="flex items-center gap-2 my-2">
+                <!-- Toggle Button -->
+                <div class="w-12 h-6 bg-gray-400 rounded-full relative flex items-center px-0.5 hover:scale-105 md:w-16 md:h-8">
+                    <div class="w-5 h-5 bg-white rounded-full shadow transition-transform md:w-7 md:h-7"></div>
+                </div>  
+
+                <!-- Day Name -->
+                <p class="font-medium text-xs max-w-[80px] truncate whitespace-nowrap md:text-xl md:max-w-[140px]">Saturday</p>
+
+                <!-- Time Buttons -->
+                <div class="flex items-center gap-1 ml-auto">
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <i class="fa-slab fa-regular fa-moon text-gray-400"></i>
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">Closed</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sunday -->
+            <div class="flex items-center gap-2 my-2">
+                <!-- Toggle Button -->
+                <div class="w-12 h-6 bg-gray-400 rounded-full relative flex items-center px-0.5 hover:scale-105 md:w-16 md:h-8">
+                    <div class="w-5 h-5 bg-white rounded-full shadow transition-transform md:w-7 md:h-7"> </div>
+                </div>  
+
+                <!-- Day Name -->
+                <p class="font-medium text-xs max-w-[80px] truncate whitespace-nowrap md:text-xl md:max-w-[140px]">Sunday</p>
+
+                <!-- Time Buttons -->
+                <div class="flex items-center gap-1 ml-auto">
+                    <button class="flex-shrink-0 rounded-md border border-gray-300 px-2 py-1 flex items-center justify-between gap-1 md:min-w-[180px]">
+                        <i class="fa-slab fa-regular fa-moon text-gray-400"></i>
+                        <p class="text-[10px] text-gray-400 whitespace-nowrap md:text-base">Closed</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="text-gray-300 mx-2">
+
+        <!-- Settings #2 -->
+        <section id="settings">
+            <!-- First settings -->
+            <div class="flex items-center p-2">
+                <div class="flex flex-col">
+                    <p class="text-black text-sm font-medium
+                    md:text-2xl">
+                    Outside bussiness hours</p>
+
+                    <p class="text-gray-400 text-xs
+                    md:text-xl">
+                    Route callers who dial outside hours</p>
+                </div>
+
+                <button class="ml-auto px-4 py-2 text-xs font-medium shadown rounded-md bg-white border border-slate-300 shadow
+                transition-colors
+                duration-300
+                hover:bg-slate-200
+                md:text-xl">
+                Set up</button>
+            </div>
+
+            <!-- Second settings -->
+            <div class="flex items-center p-2">
+                <div class="flex flex-col">
+                    <p class="text-black text-sm font-medium
+                    md:text-2xl">
+                    Create whitelist</p>
+
+                    <p class="text-gray-400 text-xs
+                    md:text-xl">
+                    Allow specific numbers to always ring through</p>
+                </div>
+                <button class="ml-auto px-4 py-2 text-xs font-medium shadown rounded-md bg-white border border-slate-300 shadown
+                transition-colors
+                duration-300
+                hover:bg-slate-200
+                md:text-xl
+                ">
+                Set up</button>
+            </div>
+
+        </section>
+
+     </div>
+    
+</body>
+</html>
