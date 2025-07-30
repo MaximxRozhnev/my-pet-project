@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <style>
+        .search {
+            margin: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        input {
+            padding: 8px;
+            width: 300px;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        #results {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 100px;
+        }
+        .error {
+            color: red;
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+
+        .result-item {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        .result-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .post-title {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        .comment-title {
+            color: #3498db;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .comment-text {
+            color: #34495e;
+            line-height: 1.5;
+            margin: 10px 0 0 0;
+        }
+
+        .post-info, .comment-info {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Введите текст..." minlength="3">
+        <button id="searchButton">Найти</button>
+    </div>
+    <div id="results"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const resultsDiv = document.getElementById('results');
+            
+            searchButton.addEventListener('click', performSearch);
+            
+            async function performSearch() {
+                const searchTerm = searchInput.value.trim();
+                
+                if (searchTerm.length < 3) {
+                    showError('Введите минимум 3 символа');
+                    return;
+                }
+                
+                showLoading();
+                
+                try {
+                    const response = await fetch('search.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: `q=${encodeURIComponent(searchTerm)}`
+                    });
+                    
+                    if (!response.ok) throw new Error('Ошибка сервера');
+                    
+                    const data = await response.json();
+                    displayResults(data);
+                } catch (error) {
+                    showError(error.message);
+                }
+            }
+            
+            function showLoading() {
+                resultsDiv.innerHTML = '<div class="loading">Идет поиск...</div>';
+            }
+            
+            function showError(message) {
+                resultsDiv.innerHTML = `<div class="error">${message}</div>`;
+            }
+            
+            function displayResults(results) {
+                if (!results || results.length === 0) {
+                    resultsDiv.innerHTML = '<div>Ничего не найдено</div>';
+                    return;
+                }
+                
+                const html = results.map(item => `
+                    <li class="result-item">
+                        <div class="result-content">
+                            <div class="post-info">
+                                <h3 class="post-title">
+                                    Пост: ${item.post_title || 'Без названия'}
+                                </h3>
+                            </div>
+                        
+                            <div class="comment-text">
+                                <p>Комментарий: ${item.comment_text || ''}</p>
+                            </div>
+                        </div>
+                    </li>
+                `).join('');
+                
+                resultsDiv.innerHTML = `<ul>${html}</ul>`;
+            }
+        });
+    </script>
+</body>
+</html>
