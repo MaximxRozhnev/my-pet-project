@@ -2,8 +2,7 @@
 
 Этот проект — современное **React**-приложение, реализующее интерфейс мобильного банка с использованием [Tailwind CSS](https://tailwindcss.com/) и [React Router DOM](https://reactrouter.com/). Приложение поддерживает светлую и тёмную тему, имеет адаптивную верстку, а также интерактивные страницы с информацией о картах, покупках и доходах.
 
-![UI Preview](<img width="387" height="832" alt="image" src="https://github.com/user-attachments/assets/0aef9289-e26b-498c-9106-d303fa71dea8" />
-)
+![UI Preview](https://github.com/user-attachments/assets/0aef9289-e26b-498c-9106-d303fa71dea8)
 
 ---
 
