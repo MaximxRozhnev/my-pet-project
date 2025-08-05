@@ -1,12 +1,29 @@
-# React + Vite
+# 💳 React-приложение банковского интерфейса
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот проект — современное **React**-приложение, реализующее интерфейс мобильного банка с использованием [Tailwind CSS](https://tailwindcss.com/) и [React Router DOM](https://reactrouter.com/). Приложение поддерживает светлую и тёмную тему, имеет адаптивную верстку, а также интерактивные страницы с информацией о картах, покупках и доходах.
 
-Currently, two official plugins are available:
+![UI Preview](<img width="387" height="832" alt="image" src="https://github.com/user-attachments/assets/0aef9289-e26b-498c-9106-d303fa71dea8" />
+)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧩 Основные технологии
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **React** — компонентный подход и работа с данными.
+- 🎨 **Tailwind CSS** — удобная утилитарная стилизация.
+- 🔀 **React Router DOM** — маршрутизация по страницам.
+- ☀️/🌙 **Темы** — светлая и тёмная тема переключаются.
+- 📁 **Импорт данных** — карты и история транзакций импортируются из `.js` файлов.
+
+---
+
+## 🖥️ Реализованный функционал
+
+- 📱 Адаптивная верстка под мобильные и десктопные устройства
+- 💳 Отображение списка банковских карт
+- 🔍 При клике на карту — переход на страницу с её деталями
+- 📜 История транзакций с фильтрацией по типам операций
+- 📈 График дохода по месяцам
+- 🌓 Переключатель светлой и тёмной темы
+
+---
